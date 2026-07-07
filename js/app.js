@@ -131,20 +131,25 @@ function renderFlash(){
   grid.innerHTML="";
   promos.forEach(p=>{
     const pct=p.oldPrice?Math.round((1-(parseFCFA(p.price)/parseFCFA(p.oldPrice)))*100):0;
+    const starSvg=`<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><polygon points="23,2 28,17 44,17 31,26 36,41 23,31 10,41 15,26 2,17 18,17" fill="#FFD700" stroke="#B8860B" stroke-width="1.2"/></svg>`;
+    const starBadge=pct>0?`<div class="flash-star-badge">${starSvg}<span>-${pct}%</span></div>`:"";
+    const cartIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`;
     const card=document.createElement("div");
     card.className="flash-card";
     card.innerHTML=`
-      ${productImg(p, 'flash-card-img-wrap', 'flash-card-img')}
+      <div class="flash-card-img-wrap">
+        ${productImg(p, 'flash-card-img-inner', 'flash-card-img')}
+        ${starBadge}
+      </div>
       <div class="flash-card-body">
-        <div class="flash-discount">-${pct}%</div>
         <div class="flash-card-name">${p.name}</div>
         <div class="flash-card-old">${p.oldPrice||''}</div>
         <div class="flash-card-price">${p.price}</div>
         <div class="flash-progress"><div class="flash-progress-bar" style="width:${30+Math.random()*60}%"></div></div>
-        <div class="flash-stock">🔥 Stock limité</div>
-        <button class="btn-add-cart" style="margin-top:8px" onclick="event.stopPropagation();ZoomCart.addItem(${p.id})">
-          <i class="fas fa-cart-plus"></i> Ajouter au panier
-        </button>
+        <div class="flash-bottom-row">
+          <div class="flash-stock">Stock limité</div>
+          <button class="flash-cart-icon-btn" title="Ajouter au panier" onclick="event.stopPropagation();ZoomCart.addItem(${p.id})">${cartIcon}</button>
+        </div>
       </div>`;
     card.addEventListener("click",()=>openModal(p));
     grid.appendChild(card);

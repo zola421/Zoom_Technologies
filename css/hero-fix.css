@@ -1,0 +1,306 @@
+/* =====================================================
+   ZOOM Technologie — Hero Fix
+   À charger EN DERNIER dans index.html (après features.css)
+   Écrase uniquement les styles hero problématiques
+   ===================================================== */
+
+/* ── 1. SECTION HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 520px;
+  max-height: 820px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ── 2. SLIDES ── */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* ── 3. OVERLAY SOMBRE UNIFORME ──
+   Remplace l'overlay précédent : dégradé du bas,
+   assez sombre pour que le texte blanc soit toujours lisible
+   quelle que soit l'image de fond */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.10) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.80) 75%,
+    rgba(0, 0, 0, 0.90) 100%
+  );
+  z-index: 1;
+}
+
+/* ── 4. CONTENU HERO ── */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 40px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ── 5. BADGE ── */
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ── 6. TITRE PRINCIPAL ──
+   Blanc pur, toujours lisible grâce à l'overlay */
+.hero-title-wrap {
+  margin-bottom: 4px;
+}
+
+.hero-title {
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 6px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  /* Supprime tout gradient ou couleur parasite */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* ── 7. HIGHLIGHT ORANGE ──
+   Affiché sur sa propre ligne, couleur orange franche */
+.hero-highlight-wrap {
+  margin-bottom: 14px;
+}
+
+.hero-highlight {
+  display: inline-block;
+  font-size: clamp(26px, 3.8vw, 44px);
+  font-weight: 800;
+  color: #FF6B00;
+  line-height: 1.15;
+  text-shadow: 0 2px 16px rgba(255, 107, 0, 0.35);
+  /* Supprime tout gradient ou style parasite */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #FF6B00 !important;
+}
+
+/* ── 8. SOUS-TITRE ── */
+.hero-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+.hero-subtitle b {
+  font-weight: 400;
+}
+
+/* ── 9. BARRE DE RECHERCHE ── */
+.hero-search {
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-search input {
+  flex: 1;
+  padding: 13px 18px;
+  border: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #111;
+  outline: none;
+}
+.hero-search input::placeholder {
+  color: #888;
+}
+
+.hero-search button {
+  padding: 13px 22px;
+  background: #FF6B00;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.18s;
+}
+.hero-search button:hover {
+  background: #e05e00;
+}
+
+/* ── 10. STATS ── */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-stats .stat {
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-stats .stat:first-child {
+  padding-left: 0;
+}
+
+.hero-stats .stat strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.hero-stats .stat span {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.60);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-stats .stat-sep {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.20);
+  flex-shrink: 0;
+}
+
+/* ── 11. FLÈCHES SLIDER ── */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.slider-arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.05);
+}
+.slider-prev { left: 16px; }
+.slider-next { right: 16px; }
+
+/* ── 12. DOTS ── */
+.slider-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.40);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  padding: 0;
+}
+.slider-dot.active {
+  background: #FF6B00;
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* ── 13. SCROLL HINT ── */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 22px;
+  right: 32px;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 18px;
+  animation: bounceDown 1.8s ease-in-out infinite;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* ── 14. RESPONSIVE MOBILE ── */
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 0 20px 40px;
+  }
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-highlight {
+    font-size: 24px;
+  }
+  .hero-search {
+    max-width: 100%;
+  }
+  .hero-search button {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+  .hero-stats .stat {
+    padding: 0 10px;
+  }
+  .hero-stats .stat strong {
+    font-size: 15px;
+  }
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
