@@ -8,7 +8,7 @@ const PRODUCTS = [
   // ===== ORDINATEURS =====
   {
     id: 1, cat: "ordinateur", badge: "new",
-    imgs: ["images/17.jpg", "images/17b.jpg", "images/17c.jpg", "images/17d.jpg"],
+    imgs: ["images/17.webp", "images/17b.webp", "images/17c.webp", "images/17d.webp"],
     icon: "💻",
     name: "Acer Aspire 16 AI Copilot",
     desc: "16\" WUXGA 120Hz Multi-Touch Display | 16GB LPDDR5X | 512GB PCIe Gen 4 SSD | Wi-Fi 7 | A16-11MT-X669",
@@ -16,7 +16,7 @@ const PRODUCTS = [
   },
   {
     id: 2, cat: "ordinateur", badge: "promo",
-    imgs: ["images/16.jpg", "images/16b.jpg", "images/16c.jpg", "images/16d.jpg"],
+    imgs: ["images/16.webp", "images/16b.webp", "images/16c.webp", "images/16d.webp"],
     icon: "💻",
     name: "Lenovo Business Laptop with Copilot AI",
     desc: "Intel 13th Gen i5-13420H • 16GB DDR5 • 512GB SSD • 16\" FHD • Microsoft 365 • WiFi 6 • Windows 11",
@@ -24,7 +24,7 @@ const PRODUCTS = [
   },
   {
     id: 3, cat: "ordinateur", badge: "promo",
-    imgs: ["images/18.jpg", null, null, null],
+    imgs: ["images/18.webp", null, null, null],
     icon: "💻",
     name: "Lenovo IdeaPad Slim 3X - 2025 - Everyday AI Laptop - Copilot",
     desc: "15.3\" WUXGA Display - 16 GB Memory - 512 GB Storage - Snapdragon® X - Luna Grey",
@@ -32,7 +32,7 @@ const PRODUCTS = [
   },
   {
     id: 4, cat: "accessoire", badge: "promo",
-    imgs: ["images/19.jpg", null, null, null],
+    imgs: ["images/19.webp", null, null, null],
     icon: "🔌",
     name: "Cat6 Ethernet Cable 1 ft (10 Pack)",
     desc: "10G Network Patch Cable for Data Centers, Home and Enterprise Networks – Blue",
@@ -40,7 +40,7 @@ const PRODUCTS = [
   },
   {
     id: 5, cat: "ecran", badge: "promo",
-    imgs: ["images/20.jpg", null, null, null],
+    imgs: ["images/20.webp", null, null, null],
     icon: "🖥️",
     name: "A2337 Screen Replacement – 13 inches MacBook",
     desc: "2560x1600 Replacement LCD Full Assembly for EMC 3598 MGN63 Space Grey",
@@ -48,7 +48,7 @@ const PRODUCTS = [
   },
   {
     id: 6, cat: "ordinateur", badge: "",
-    imgs: ["images/6.jpg", null, null, null],
+    imgs: ["images/6.webp", null, null, null],
     icon: "💻",
     name: "Laptop ASUS VivoBook – Ryzen 5",
     desc: "15.6\" FHD, 8Go RAM, 512Go SSD, écran anti-reflets.",
@@ -58,7 +58,7 @@ const PRODUCTS = [
   // ===== SMARTPHONES & ACCESSOIRES =====
   {
     id: 7, cat: "accessoire", badge: "promo",
-    imgs: ["images/22.jpg", null, null, null],
+    imgs: ["images/22.webp", null, null, null],
     icon: "🔌",
     name: "VJYUIJAY Universal 65W USB C Laptop Charger",
     desc: "Compatible with HP chromebook Lenovo Dell Acer Asus Samsung Google Computer Type C Power AC Adapter",
@@ -66,7 +66,7 @@ const PRODUCTS = [
   },
   {
     id: 8, cat: "accessoire", badge: "promo",
-    imgs: ["images/21.jpg", null, null, null],
+    imgs: ["images/21.webp", null, null, null],
     icon: "🖥️",
     name: "Screen Replacement A4532 LCD – 13 inches HP, LENOVO",
     desc: "2560x1600 Replacement LCD Full Assembly for EMC 3598 MGN63 Space Grey",
@@ -74,7 +74,7 @@ const PRODUCTS = [
   },
   {
     id: 9, cat: "accessoire", badge: "promo",
-    imgs: ["images/23.jpg", null, null, null],
+    imgs: ["images/23.webp", null, null, null],
     icon: "🔋",
     name: "Fancy Buying New B21N1329 Laptop Battery",
     desc: "Asus X403 X403M X403MA X503M X502CA X453 X453M X453MA X553 X553M X553MA - 7.6V 30Wh",
@@ -340,7 +340,7 @@ const PRODUCTS = [
   },
  {
     id: 41, cat: "accessoire", badge: "",
-    imgs: ["images/24.jpg", "images/24a.jpg", "images/24b.jpg", "images/24c.jpg"],
+    imgs: ["images/24.webp", "images/24a.webp", "images/24b.webp", "images/24c.webp"],
     icon: "🖨️",
     name: "Boitier Disque dur SSD - M.2 SSD Enclosure 3.1",
     desc: "Jet d'encre couleur, scanner, copie, WiFi, recto-verso auto.",
