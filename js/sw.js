@@ -5,7 +5,7 @@
    Network-first pour données
    =========================== */
 
-const CACHE_NAME    = 'zoom-tech-v1';
+const CACHE_NAME    = 'zoom-tech-v2';
 const OFFLINE_URL   = '/offline.html';
 
 // ── Assets à mettre en cache au premier chargement ──
@@ -20,6 +20,12 @@ const PRECACHE = [
   '/css/chat.css',
   '/css/i18n.css',
   '/css/zoom-image.css',
+  '/css/features.css',
+  '/css/hero-fix.css',
+  '/css/categories-fix.css',
+  '/css/flash-fix.css',
+  '/css/share.css',
+  '/js/performance.js',
   '/js/products.js',
   '/js/app.js',
   '/js/cookies.js',

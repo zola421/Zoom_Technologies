@@ -173,6 +173,7 @@ function productImg(p, wrapClass, emojiClass){
   if(first){
     return `<div class="${wrapClass}">
       <img src="${first}" class="prod-real-img" alt="${p.name}"
+           loading="lazy" decoding="async"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="${emojiClass}" style="display:none">${p.icon}</div>
     </div>`;
