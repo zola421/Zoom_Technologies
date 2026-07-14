@@ -733,15 +733,23 @@ function showPwaUpdate(){
 </script>
 
 <script>
-/* ── Hero slides lazy-load : charge chaque image 1s après le load ── */
-window.addEventListener('load', function(){
-  setTimeout(function(){
+/* ── Hero slides : charge la 1ère image immédiatement (déjà en dur),
+     charge les slides 2+ dès que possible sans bloquer le rendu ── */
+(function(){
+  function loadHeroSlides(){
     document.querySelectorAll('.hero-slide[data-bg]').forEach(function(s){
       s.style.backgroundImage = "url('" + s.getAttribute('data-bg') + "')";
       s.removeAttribute('data-bg');
     });
-  }, 800);
-});
+  }
+  if(document.readyState === 'complete'){
+    loadHeroSlides();
+  } else {
+    window.addEventListener('load', loadHeroSlides);
+    // Sécurité : si 'load' tarde (images lourdes), charger après 1.5s max
+    setTimeout(loadHeroSlides, 1500);
+  }
+})();
 </script>
 </body>
 </html>
