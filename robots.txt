@@ -1,0 +1,31 @@
+# ZOOM Technologie — robots.txt
+User-agent: *
+Allow: /
+
+# Bloquer les pages admin des moteurs de recherche
+Disallow: /admin.html
+Disallow: /js/admin.js
+
+# Sitemap
+Sitemap: https://zoomtechnologies.it.com/sitemap.xml
+
+# Autoriser explicitement les robots des IA
+User-agent: GPTBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
