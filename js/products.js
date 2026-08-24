@@ -132,7 +132,7 @@ const PRODUCTS = [
   },
   {
     id: 16, cat: "accessoire", badge: "new",
-    imgs: ["images/CSF 1.webp", "images/CSF.webp", null, null],
+    imgs: ["images/CSF.webp", "images/CSF 1.webp", null, null],
     icon: "🎧",
     name: "Écouteurs Sans Fil– Réduction de bruit",
     desc: "Bluetooth 5.3, Codecs et latence , Autonomie: 30h, Réduction de bruit active ANC, Compatible: Windows, iPhone, PS5, Switch, TV",
